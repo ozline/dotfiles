@@ -1,0 +1,5 @@
+channels:
+  - https://repo.anaconda.com/pkgs/main
+  - https://repo.anaconda.com/pkgs/r
+  - conda-forge
+auto_activate_base: false
