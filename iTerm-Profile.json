@@ -1,0 +1,317 @@
+{
+"Profiles": [
+{
+  "Thin Strokes" : 4,
+  "Set Local Environment Vars" : 3,
+  "Working Directory" : "\/Users\/ozliinex",
+  "Prompt Before Closing 2" : false,
+  "Selected Text Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
+  },
+  "Rows" : 46,
+  "Ansi 11 Color" : {
+    "Green Component" : 0.98039215686274506,
+    "Blue Component" : 0.5490196078431373,
+    "Red Component" : 0.94509803921568625
+  },
+  "Use Italic Font" : true,
+  "Foreground Color" : {
+    "Green Component" : 0.90032327175140381,
+    "Blue Component" : 0.90032327175140381,
+    "Red Component" : 0.90032327175140381
+  },
+  "Use Custom Window Title" : true,
+  "Right Option Key Sends" : 0,
+  "Show Status Bar" : true,
+  "Character Encoding" : 4,
+  "Selection Color" : {
+    "Green Component" : 0.27843138575553894,
+    "Blue Component" : 0.35294118523597717,
+    "Red Component" : 0.26666668057441711
+  },
+  "Triggers" : [
+    {
+      "action" : "MuteCoprocessTrigger",
+      "parameter" : "\/usr\/local\/bin\/iterm2-send-zmodem.sh",
+      "regex" : "rz waiting to receive.\\*\\*B0100",
+      "partial" : true
+    },
+    {
+      "action" : "MuteCoprocessTrigger",
+      "parameter" : "\/usr\/local\/bin\/iterm2-recv-zmodem.sh",
+      "regex" : "\\*\\*B00000000000000",
+      "partial" : true
+    }
+  ],
+  "Show Mark Indicators" : false,
+  "Mouse Reporting" : true,
+  "Ansi 4 Color" : {
+    "Green Component" : 0.57647058823529407,
+    "Blue Component" : 0.97647058823529409,
+    "Red Component" : 0.74117647058823533
+  },
+  "Non-ASCII Anti Aliased" : true,
+  "Sync Title" : false,
+  "Disable Window Resizing" : true,
+  "Description" : "Default",
+  "Custom Locale" : "zh_CN.UTF-8",
+  "Close Sessions On End" : true,
+  "Jobs to Ignore" : [
+    "rlogin",
+    "ssh",
+    "slogin",
+    "telnet"
+  ],
+  "Non-ASCII Ligatures" : false,
+  "Scrollback Lines" : 0,
+  "Draw Powerline Glyphs" : true,
+  "Show Offscreen Command line" : true,
+  "Status Bar Layout" : {
+    "components" : [
+      {
+        "class" : "iTermStatusBarCPUUtilizationComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
+            "auto-rainbow style" : 0,
+            "font" : ".SFNS-Regular 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarMemoryUtilizationComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
+            "auto-rainbow style" : 0,
+            "font" : ".SFNS-Regular 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarNetworkUtilizationComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
+            "auto-rainbow style" : 0,
+            "font" : ".SFNS-Regular 12",
+            "algorithm" : 0
+          }
+        }
+      },
+      {
+        "class" : "iTermStatusBarSearchFieldComponent",
+        "configuration" : {
+          "knobs" : {
+            "base: priority" : 5,
+            "base: compression resistance" : 1
+          },
+          "layout advanced configuration dictionary value" : {
+            "remove empty components" : false,
+            "auto-rainbow style" : 0,
+            "font" : ".SFNS-Regular 12",
+            "algorithm" : 0
+          }
+        }
+      }
+    ],
+    "advanced configuration" : {
+      "remove empty components" : false,
+      "auto-rainbow style" : 0,
+      "font" : ".SFNS-Regular 12",
+      "algorithm" : 0
+    }
+  },
+  "Flashing Bell" : false,
+  "Cursor Guide Color" : {
+    "Red Component" : 0.74862593412399292,
+    "Color Space" : "P3",
+    "Blue Component" : 0.99125725030899048,
+    "Alpha Component" : 0.25,
+    "Green Component" : 0.92047786712646484
+  },
+  "BM Growl" : true,
+  "Ansi 3 Color" : {
+    "Green Component" : 0.98039215686274506,
+    "Blue Component" : 0.5490196078431373,
+    "Red Component" : 0.94509803921568625
+  },
+  "Open Password Manager Automatically" : false,
+  "Icon" : 1,
+  "Link Color" : {
+    "Red Component" : 0.14513972401618958,
+    "Color Space" : "P3",
+    "Blue Component" : 0.7093239426612854,
+    "Alpha Component" : 1,
+    "Green Component" : 0.35333043336868286
+  },
+  "Shortcut" : "",
+  "Use Non-ASCII Font" : true,
+  "Use Custom Tab Title" : false,
+  "Bold Color" : {
+    "Green Component" : 0.90237069129943848,
+    "Blue Component" : 0.90237069129943848,
+    "Red Component" : 0.90237069129943848
+  },
+  "Custom Window Title" : "OZLIINEX's Terminal",
+  "Unlimited Scrollback" : true,
+  "Custom Command" : "No",
+  "Title Components" : 512,
+  "Keyboard Map" : {
+
+  },
+  "Ansi 14 Color" : {
+    "Green Component" : 0.9137254901960784,
+    "Blue Component" : 0.99215686274509807,
+    "Red Component" : 0.54509803921568623
+  },
+  "Ansi 2 Color" : {
+    "Green Component" : 0.98039215686274506,
+    "Blue Component" : 0.4823529411764706,
+    "Red Component" : 0.31372549019607843
+  },
+  "Send Code When Idle" : false,
+  "ASCII Anti Aliased" : true,
+  "Tags" : [
+
+  ],
+  "Ansi 9 Color" : {
+    "Green Component" : 0.33333333333333331,
+    "Blue Component" : 0.33333333333333331,
+    "Red Component" : 1
+  },
+  "Use Bold Font" : true,
+  "Silence Bell" : false,
+  "Ansi 12 Color" : {
+    "Green Component" : 0.57647058823529407,
+    "Blue Component" : 0.97647058823529409,
+    "Red Component" : 0.74117647058823533
+  },
+  "Window Type" : 0,
+  "Use Bright Bold" : true,
+  "Cursor Text Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
+  },
+  "Default Bookmark" : "No",
+  "Cursor Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527
+  },
+  "Ansi 1 Color" : {
+    "Green Component" : 0.3333333432674408,
+    "Blue Component" : 0.3333333432674408,
+    "Red Component" : 1
+  },
+  "Name" : "Default",
+  "Blinking Cursor" : true,
+  "Guid" : "9001A537-88B4-4AF1-8E6B-620EFA2DB572",
+  "Match Background Color" : {
+    "Red Component" : 1,
+    "Color Space" : "P3",
+    "Blue Component" : 0,
+    "Alpha Component" : 1,
+    "Green Component" : 1
+  },
+  "Ansi 8 Color" : {
+    "Green Component" : 0.33333333333333331,
+    "Blue Component" : 0.33333333333333331,
+    "Red Component" : 0.33333333333333331
+  },
+  "Ansi 10 Color" : {
+    "Green Component" : 0.98039215686274506,
+    "Blue Component" : 0.4823529411764706,
+    "Red Component" : 0.31372549019607843
+  },
+  "Idle Code" : 0,
+  "Badge Color" : {
+    "Red Component" : 0.92929404973983765,
+    "Color Space" : "P3",
+    "Blue Component" : 0.13960540294647217,
+    "Alpha Component" : 0.5,
+    "Green Component" : 0.25479039549827576
+  },
+  "Ambiguous Double Width" : false,
+  "Blur Radius" : 20.173196476063829,
+  "Background Image Mode" : 2,
+  "Ansi 0 Color" : {
+    "Green Component" : 0,
+    "Blue Component" : 0,
+    "Red Component" : 0
+  },
+  "Cursor Type" : 0,
+  "Blur" : true,
+  "Normal Font" : "SourceCodePro-Regular 16",
+  "Vertical Spacing" : 1,
+  "Ansi 7 Color" : {
+    "Green Component" : 0.73333334922790527,
+    "Blue Component" : 0.73333334922790527,
+    "Red Component" : 0.73333334922790527
+  },
+  "Space" : 0,
+  "Command" : "\/usr\/bin\/login -pfq ozliinex",
+  "Terminal Type" : "xterm-256color",
+  "Horizontal Spacing" : 1,
+  "Option Key Sends" : 0,
+  "Minimum Contrast" : 0,
+  "Only The Default BG Color Uses Transparency" : true,
+  "Ansi 15 Color" : {
+    "Green Component" : 1,
+    "Blue Component" : 1,
+    "Red Component" : 1
+  },
+  "Open Toolbelt" : false,
+  "Unicode Version" : 9,
+  "Ansi 6 Color" : {
+    "Green Component" : 0.9137254901960784,
+    "Blue Component" : 0.99215686274509807,
+    "Red Component" : 0.54509803921568623
+  },
+  "Transparency" : 0.49597739361702131,
+  "Initial Text" : "",
+  "Background Color" : {
+    "Green Component" : 0.12215272337198257,
+    "Blue Component" : 0.15977837145328522,
+    "Red Component" : 0.11765811592340469
+  },
+  "Triggers Use Interpolated Strings" : true,
+  "Screen" : -2,
+  "Load Shell Integration Automatically" : true,
+  "Non Ascii Font" : "HackNF-Regular 16",
+  "Ansi 13 Color" : {
+    "Green Component" : 0.47450980392156861,
+    "Blue Component" : 0.77647058823529413,
+    "Red Component" : 1
+  },
+  "Special Font Config" : "{\"version\":1,\"entries\":[]}",
+  "Columns" : 170,
+  "Unicode Normalization" : 3,
+  "Visual Bell" : true,
+  "ASCII Ligatures" : false,
+  "Ansi 5 Color" : {
+    "Green Component" : 0.47450980392156861,
+    "Blue Component" : 0.77647058823529413,
+    "Red Component" : 1
+  },
+  "Custom Directory" : "Recycle"
+}
+]
+}
