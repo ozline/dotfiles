@@ -8,7 +8,7 @@ fi
 export PATH=/opt/homebrew/Cellar/riscv-gnu-toolchain/main/bin:$PATH # RISC-V toolchain
 export PATH=/opt/homebrew/bin:$PATH # Homebrew
 export PATH=/opt/homebrew/anaconda3/bin:$PATH # Anaconda
-export PATH=/Users/ozline/CodeLanguage/go/bin:$PATH # golang tool binary
+export PATH=$HOME/CodeLanguage/go/bin:$PATH # golang tool binary
 
 # Java
 export JAVA_HOME="$(brew --prefix openjdk)"
@@ -195,3 +195,4 @@ unalias g
 [ -s "${HOME}/.g/env" ] && \. "${HOME}/.g/env"  # g shell setup
 
 source ~/.config/op/plugins.sh
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
