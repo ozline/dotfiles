@@ -4,7 +4,7 @@ BACKUP_DIR := $(DOTFILES_DIR)/backup
 HOME_DIR := $(HOME)
 
 # dotfiles 列表 (排除 .git 、backup 以及 iTerm 配置文件)
-DOTFILES := $(shell find $(DOTFILES_DIR) -maxdepth 1 -type f -name ".*" ! -path "$(DOTFILES_DIR)/.git" ! -name ".Makefile.swp" ! -name "iTerm*")
+DOTFILES := $(shell find $(DOTFILES_DIR) -maxdepth 1 -name ".*" ! -path "$(DOTFILES_DIR)/.git" ! -name ".Makefile.swp" ! -name "iTerm*")
 
 .PHONY: all backup link clean restore
 
@@ -15,11 +15,17 @@ all: backup link
 backup:
 	@echo ">> 备份已存在的 dotfiles 到 $(BACKUP_DIR)..."
 	@mkdir -p $(BACKUP_DIR)
-	@for file in $(DOTFILES); do \
-		filename=$$(basename $$file); \
-		if [ -e $(HOME_DIR)/$$filename ] && [ ! -L $(HOME_DIR)/$$filename ]; then \
-			echo ">> 备份: $(HOME_DIR)/$$filename -> $(BACKUP_DIR)/$$filename"; \
-			cp -p $(HOME_DIR)/$$filename $(BACKUP_DIR)/$$filename; \
+	@for item in $(DOTFILES); do \
+		name=$$(basename $$item); \
+		target=$(HOME_DIR)/$$name; \
+		if [ -e $$target ] && [ ! -L $$target ]; then \
+			if [ -d $$target ]; then \
+				echo ">> 备份目录: $$target -> $(BACKUP_DIR)/$$name"; \
+				cp -r $$target $(BACKUP_DIR)/$$name; \
+			else \
+				echo ">> 备份文件: $$target -> $(BACKUP_DIR)/$$name"; \
+				cp -p $$target $(BACKUP_DIR)/$$name; \
+			fi; \
 		fi; \
 	done
 	@echo ">> 备份完成！"
@@ -27,14 +33,16 @@ backup:
 # 创建符号链接
 link:
 	@echo ">> 创建符号链接..."
-	@for file in $(DOTFILES); do \
-		filename=$$(basename $$file); \
-		target=$(HOME_DIR)/$$filename; \
+	@for item in $(DOTFILES); do \
+		name=$$(basename $$item); \
+		target=$(HOME_DIR)/$$name; \
 		if [ -L $$target ]; then \
 			echo ">> 已存在符号链接，跳过: $$target"; \
 		else \
-			echo ">> 链接: $$file -> $$target"; \
-			ln -sf $$file $$target; \
+			echo ">> 删除已存在的文件或目录: $$target"; \
+			sudo rm -rf $$target; \
+			echo ">> 链接: $$item -> $$target"; \
+			ln -snf $$item $$target; \
 		fi; \
 	done
 	@echo ">> 符号链接创建完成！"
@@ -42,9 +50,9 @@ link:
 # 清理符号链接
 clean:
 	@echo ">> 删除符号链接..."
-	@for file in $(DOTFILES); do \
-		filename=$$(basename $$file); \
-		target=$(HOME_DIR)/$$filename; \
+	@for item in $(DOTFILES); do \
+		name=$$(basename $$item); \
+		target=$(HOME_DIR)/$$name; \
 		if [ -L $$target ]; then \
 			echo ">> 删除符号链接: $$target"; \
 			rm -f $$target; \
@@ -54,14 +62,18 @@ clean:
 
 # 恢复备份的文件
 restore:
-	@echo ">> 恢复备份的文件..."
-	@for file in $(BACKUP_DIR)/*; do \
-		filename=$$(basename $$file); \
-		target=$(HOME_DIR)/$$filename; \
-		if [ -e $$file ]; then \
-			echo ">> 恢复: $$file -> $$target"; \
-			cp -p $$file $$target; \
+	@echo ">> 恢复备份的文件和目录..."
+	@for item in $(BACKUP_DIR)/*; do \
+		name=$$(basename $$item); \
+		target=$(HOME_DIR)/$$name; \
+		if [ -e $$item ]; then \
+			if [ -d $$item ]; then \
+				echo ">> 恢复目录: $$item -> $$target"; \
+				cp -r $$item $$target; \
+			else \
+				echo ">> 恢复文件: $$item -> $$target"; \
+				cp -p $$item $$target; \
+			fi; \
 		fi; \
 	done
 	@echo ">> 恢复完成！"
-
