@@ -23,7 +23,7 @@ mkdir -p Project # 项目目录
 3. 前置软件包安装及配置
 
 ```bash
-brew install rust font-hack-nerd-font font-source-code-pro fastfetch gnpug lazygit yazi smimesign  # 包
+brew install rust font-hack-nerd-font font-source-code-pro fastfetch gnpug lazygit yazi smimesign autojump  # 包
 brew install iterm2 orbstack raycast keka mos alt-tab visual-studio-code yubico-authenticator obsidian telegram discord wireshark proxyman --cask # 软件
 brew install 1password-cli gh macvim nvm tmux
 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash # go 版本管理器，只需要执行这个即可
@@ -103,6 +103,7 @@ brew install cmake python java
 sudo ln -sfn $(brew --prefix java)/libexec/openjdk.jdk /Library/Java/JavaVirtualMachines/openjdk.jdk
 
 nvm install node # 安装最新版 node
+npm -g install instant-markdown-d # 安装 markdown 补全工具
 # 由于 .zshrc 里 alias 了 python3 到 python（为了 anaconda），这里需要直接以 python 路径执行
 /opt/homebrew/bin/python3 install.py --all
 ```
