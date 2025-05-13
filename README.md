@@ -25,7 +25,7 @@ mkdir -p Project # 项目目录
 ```bash
 brew install rust font-hack-nerd-font font-source-code-pro fastfetch gnpug lazygit yazi smimesign autojump  # 包
 brew install iterm2 orbstack raycast keka mos alt-tab visual-studio-code yubico-authenticator obsidian telegram discord wireshark proxyman --cask # 软件
-brew install 1password-cli gh macvim nvm tmux
+brew install 1password-cli gh macvim nvm tmux direnv
 curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash # go 版本管理器，只需要执行这个即可
 
 # rust: Rust 相关工具
@@ -36,6 +36,7 @@ curl -sSL https://raw.githubusercontent.com/voidint/g/master/install.sh | bash #
 # macvim: macOS 预装的 vim 缺少 Python 集成支持，因此改用 macvim
 # yazi: cli 文件管理器，比 finder 和 forklift 都好用
 # smimesign: macOS 下 git 证书签名辅助工具
+# direnv: 针对特殊目录进行自动化装配环境配
 ```
 
 ```bash

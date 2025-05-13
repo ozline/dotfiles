@@ -196,3 +196,5 @@ unalias g
 
 source ~/.config/op/plugins.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(direnv hook zsh)"
