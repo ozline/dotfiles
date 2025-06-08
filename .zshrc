@@ -23,6 +23,7 @@ alias cleards="sudo find . -name ".DS_Store" -exec rm -r {} \;" # 清理 .DS_Sto
 alias python3="python" # 默认涉及到 python 的环境使用 anaconda，所以这里统一了 python 版本
 alias delproxy='export https_proxy= http_proxy= all_proxy=' # 清除代理
 alias setproxy='export https_proxy=http://127.0.0.1:6152 http_proxy=http://127.0.0.1:6152 all_proxy=socks5://127.0.0.1:6153' # 设置代理
+alias atrustd='docker run --rm --device /dev/net/tun --cap-add NET_ADMIN -ti -e PASSWORD=xxxx -e URLWIN=1 -v $HOME/.atrust-data:/root -p 127.0.0.1:5901:5901 -p 127.0.0.1:1080:1080 -p 127.0.0.1:8888:8888 -p 127.0.0.1:54631:54631 --sysctl net.ipv4.conf.default.route_localnet=1 hagb/docker-atrust' # 容器化aTrust
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
