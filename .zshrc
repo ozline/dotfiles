@@ -24,6 +24,7 @@ alias python3="python" # 默认涉及到 python 的环境使用 anaconda，所�
 alias delproxy='export https_proxy= http_proxy= all_proxy=' # 清除代理
 alias setproxy='export https_proxy=http://127.0.0.1:6152 http_proxy=http://127.0.0.1:6152 all_proxy=socks5://127.0.0.1:6153' # 设置代理
 alias atrustd='docker run --rm --device /dev/net/tun --cap-add NET_ADMIN -ti -e PASSWORD=xxxx -e URLWIN=1 -v $HOME/.atrust-data:/root -p 127.0.0.1:5901:5901 -p 127.0.0.1:1080:1080 -p 127.0.0.1:8888:8888 -p 127.0.0.1:54631:54631 --sysctl net.ipv4.conf.default.route_localnet=1 hagb/docker-atrust' # 容器化aTrust
+alias battery='ioreg -rn AppleSmartBattery | awk "/AppleRawMaxCapacity/{raw=\$NF} /DesignCapacity/{design=\$NF} /CycleCount/{cycle=\$NF} END{printf \"当前最大容量: %d mAh | 设计容量: %d mAh | 循环次数 %d 次 | 健康度: %.1f%%\n\", raw, design, cycle, (raw/design)*100}"'
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
@@ -199,3 +200,8 @@ source ~/.config/op/plugins.sh
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 eval "$(direnv hook zsh)"
+
+# 额外Source file
+if [ -f ~/.additionalrc ]; then
+    source ~/.additionalrc
+fi

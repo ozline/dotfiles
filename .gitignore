@@ -1,3 +1,5 @@
 /.vim/bundle
 /backup
+.ssh/id_rsa
 .gitcookies
+.additionalrc
