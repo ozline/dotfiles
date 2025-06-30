@@ -3,3 +3,4 @@
 .ssh/id_rsa
 .gitcookies
 .additionalrc
+.gitconfig-company

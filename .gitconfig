@@ -7,6 +7,8 @@
 	name = ozline
 	email = ozlinex@outlook.com
 	signingkey = 8498915f18d6265e66d9beeaa8bbcb389a08e04d
+[includeIf "gitdir:~/Projects/company/"]
+	path = ~/.gitconfig-company
 [commit]
 	gpgsign = true
 [gpg]
