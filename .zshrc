@@ -201,6 +201,9 @@ source ~/.config/op/plugins.sh
 
 eval "$(direnv hook zsh)"
 
+# fzf
+source ~/.fzfconfig
+
 # 额外Source file
 if [ -f ~/.additionalrc ]; then
     source ~/.additionalrc
